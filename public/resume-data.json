@@ -1,0 +1,408 @@
+{
+  "_version": "1.0.0",
+  "resume": {
+    "en": {
+      "basics": {
+        "name": "John Doe",
+        "label": "Job Title",
+        "picture": "",
+        "email": "john.doe@myemail.com",
+        "phone": "(111) 123-4567",
+        "website": "https://www.johndoe.com/",
+        "skype": "live:john.doe",
+        "discords": "john#1122",
+        "summary": {
+          "desc": "Enjoy working forever on whichever whenever I need for anyone at any time running out of time to get more time to work at night and day everyday.",
+          "subtitle": "I am super good at my job",
+          "items": [
+            "75 years of knowledge",
+            "6 years as a teenager",
+            "12 years as a kid",
+            "I never sleep",
+            "I know everything",
+            "Numeric data trying",
+            "More and more knowledge to work better"
+          ]
+        },
+        "location": {
+          "address": "123 Street Somewhere",
+          "postalCode": "Z0Z 0Z0",
+          "city": "MyCity",
+          "countryCode": "USA",
+          "country": "United States",
+          "region": "New York"
+        },
+        "profiles": [
+          {
+            "network": "LinkedIn",
+            "username": "johndoe",
+            "url": "https://www.linkedin.com/in/johndoe/"
+          },
+          {
+            "network": "Facebook",
+            "username": "johndoe",
+            "url": "https://www.facebook.com/john.doe911"
+          }
+        ]
+      },
+      "work": [
+        {
+          "company": "My Company Title #1",
+          "position": "My Position #1",
+          "location": "MyCity, California",
+          "website": "https://www.mycompany1.com",
+          "startDate": "2020-03-01",
+          "endDate": "",
+          "description": "",
+          "summary": [
+            {
+              "title": "• Super cool project that never ends except sometimes",
+              "items": [
+                "* Play tennis everyday",
+                "- Work one day and sleep another day",
+                "- More stuff to get stuff done",
+                "- Provide thing to get stuff done on previous line",
+                "- Nothing much to add but need to fill a line",
+                "- Maybe another line just to look busy"
+              ]
+            }
+          ]
+        },
+        {
+          "company": "My Company #2",
+          "position": "My Position #2",
+          "location": "My City #2, New York",
+          "website": "https://www.mycompany2.ca",
+          "startDate": "2019-03-01",
+          "endDate": "2020-02-01",
+          "description": "Did a lot of stuff to get more stuff and always stuff and work again always for a very very long time day and night.",
+          "summary": [
+            {
+              "title": "• Very long contract to help customer at company",
+              "items": [
+                "- Assisted people to get things done faster",
+                "- Created a new process to look busy more often"
+              ]
+            }
+          ]
+        },
+        {
+          "company": "My Company #3",
+          "position": "My Position #3",
+          "location": "My City #3, Texas",
+          "website": "http://www.mycompany3.com",
+          "startDate": "2015-10-31",
+          "endDate": "2019-02-14",
+          "description": "This is a description to describe the work done at company #3 which was yesterday and tomorrow and maybe also on next year but as I quit this company it won't happen so we'll see on next company.",
+          "summary": [
+            {
+              "title": "• Do stuff for more things to get more people",
+              "items": ["[ One Thing | Two Thing | Third Thing | A Thing ]"]
+            },
+            {
+              "title": "• Another thing I was responsible for",
+              "items": [
+                "- Sleep more than one day in a row",
+                "- Stopped to sleep because I got fired",
+                "- Run away faster than my boss ran after me",
+                "- Wrote a letter to explain why I ran away",
+                "- Best sleeper of my team",
+                "- Trying to find something else to write here"
+              ]
+            },
+            {
+              "title": "• Another thing to write here just to write text",
+              "items": [
+                "- More text on a line to read useless things",
+                "- I would like to find something interesting to say",
+                "- I hope I will get hired with my writing skills",
+                "- Maybe the recruiter won't read my CV afterall",
+                "- I know that I can find a Job"
+              ]
+            },
+            {
+              "title": "• Do more stuff because I am busy",
+              "items": []
+            },
+            {
+              "title": "• That's enough because now I am tired to write that",
+              "items": ["[ Write #1 | Write #2 | Write #3 | Write #4 ]"]
+            }
+          ]
+        },
+        {
+          "company": "My Company #4",
+          "position": "My Position #4",
+          "location": "MyCity, New York",
+          "website": "http://www.mycompany4.com",
+          "startDate": "2008-09-02",
+          "endDate": "2015-10-20",
+          "pagebreak": true,
+          "summary": [
+            {
+              "title": "• This company will appear on a new page",
+              "items": []
+            },
+            {
+              "title": "• That's because the page-break flag is set to true",
+              "items": ["[ Thing #1 | Thing #2 | Thing #3 ]"]
+            },
+            {
+              "title": "• Did more stuff that need to appear on this line",
+              "items": ["- One day I worked so hard that I didn't sleep"]
+            },
+            {
+              "title": "• Helped a colleague to get things done faster",
+              "items": []
+            },
+            {
+              "title": "• Speaking in front of people make me shy",
+              "items": []
+            }
+          ]
+        }
+      ],
+      "education": [
+        {
+          "institution": "Institution Learn Things #1",
+          "website": "https://www.institution1.com/",
+          "area": "Area of Studies",
+          "studyType": "Bachelor",
+          "startDate": "2001-07-01",
+          "endDate": "2004-10-01",
+          "gpa": "4.31",
+          "courses": ["Courses #1", "Courses #2"]
+        },
+        {
+          "institution": "Institution Learn Things #2",
+          "website": "https://www.institution2.ca/",
+          "area": "Another Area",
+          "studyType": "Certificate",
+          "startDate": "1999-09-01",
+          "endDate": "2000-05-01",
+          "gpa": "2.11",
+          "courses": ["Knowledge Full"]
+        },
+        {
+          "institution": "Institution Learn Things #3",
+          "website": "https://www.institution3.com/",
+          "area": "Another Area #3",
+          "studyType": "Things",
+          "startDate": "1996-04-01",
+          "endDate": "1998-07-01",
+          "courses": ["Another Course"]
+        }
+      ],
+      "skills": [
+        {
+          "title": "FullHot",
+          "keywords": [
+            {
+              "name": "Hot #1",
+              "level": 6
+            },
+            {
+              "name": "Hot #2",
+              "level": 5
+            },
+            {
+              "name": "Hot #3",
+              "level": 4
+            },
+            {
+              "name": "Hot #4",
+              "level": 5
+            },
+            {
+              "name": "Hot #5",
+              "level": 6
+            }
+          ]
+        },
+        {
+          "title": "SuperHot",
+          "keywords": [
+            {
+              "name": "Super #1",
+              "level": 6
+            },
+            {
+              "name": "Super #2",
+              "level": 6
+            },
+            {
+              "name": "Super #3",
+              "level": 5
+            },
+            {
+              "name": "Super #4",
+              "level": 5
+            },
+            {
+              "name": "Super #5",
+              "level": 5
+            },
+            {
+              "name": "Super #6",
+              "level": 4
+            }
+          ]
+        },
+        {
+          "title": "ExtraHot",
+          "keywords": [
+            {
+              "name": "Extra #1",
+              "level": 6
+            },
+            {
+              "name": "Extra #2",
+              "level": 5
+            },
+            {
+              "name": "Extra #3",
+              "level": 3
+            },
+            {
+              "name": "Extra #4",
+              "level": 4
+            },
+            {
+              "name": "Extra #5",
+              "level": 4
+            }
+          ]
+        },
+        {
+          "title": "MegaHot",
+          "keywords": [
+            {
+              "name": "Mega #1",
+              "level": 5
+            },
+            {
+              "name": "Mega #2",
+              "level": 6
+            },
+            {
+              "name": "Mega #3",
+              "level": 6
+            },
+            {
+              "name": "Mega #4",
+              "level": 5
+            },
+            {
+              "name": "Mega #5",
+              "level": 6
+            },
+            {
+              "name": "Mega #6",
+              "level": 6
+            }
+          ]
+        }
+      ],
+      "languages": [
+        {
+          "code": "es",
+          "language": "Espanol",
+          "fluency": "Native speaker"
+        },
+        {
+          "code": "en",
+          "language": "English",
+          "fluency": "Work proficiency"
+        }
+      ],
+      "interests": [
+        {
+          "name": "Interesting Thing #1",
+          "description": {
+            "long": "A not that very long description for interesting thing #1.",
+            "short": "A shorter description for #1."
+          }
+        },
+        {
+          "name": "Interesting Thing #2",
+          "description": {
+            "long": "A not that very long description for interesting thing #2. A not that very long description for interesting thing #1. A not that very long description for interesting thing #1. A not that very long description for interesting thing #1. A not that very long description for interesting thing #1.",
+            "short": "A shorter description for #2."
+          }
+        },
+        {
+          "name": "Interesting Thing #3",
+          "description": {
+            "long": "A not that very long description for interesting thing #3.",
+            "short": "A shorter description for #3."
+          }
+        },
+        {
+          "name": "Interesting Thing #4",
+          "description": {
+            "long": "A not that very long description for interesting thing #4.",
+            "short": "A shorter description for #4."
+          }
+        },
+        {
+          "name": "Interesting Thing #5",
+          "description": {
+            "long": "A not that very long description for interesting thing #5.",
+            "short": "A shorter description for #5."
+          }
+        }
+      ],
+      "certifications": [
+        {
+          "name": "Certification #1",
+          "authority": "IEEE",
+          "dateCompleted": "2001"
+        },
+        {
+          "name": "Certification #2",
+          "authority": "CompTIA",
+          "dateCompleted": "2000"
+        },
+        {
+          "name": "Certification #3",
+          "authority": "CompTIA",
+          "dateCompleted": "1999"
+        },
+        {
+          "name": "Certification #4",
+          "authority": "Apple",
+          "dateCompleted": "1999"
+        }
+      ],
+      "projects": [
+        {
+          "name": "MySuperProject #1",
+          "category": "Game",
+          "src": "anImageToDescribeProject1.png",
+          "date": "2017-03",
+          "text": "The game was super fun and more than 2 people played it.",
+          "link": "http://www.mysupergame1.ca/",
+          "isActive": false
+        },
+        {
+          "name": "MySuperProject #2",
+          "category": "Game",
+          "src": "anImageToDescribeProject2.png",
+          "date": "2017-03",
+          "text": "The game was super fun and more than 3 people played it.",
+          "link": "http://www.mysupergame2.ca/",
+          "isActive": false
+        },
+        {
+          "name": "My Chat Room",
+          "category": "Software",
+          "src": "sitediscussion.png",
+          "date": "2018-01",
+          "text": "Still an active project, My Chat Room is a secure and anonymous online chat application for anyone with Internet access and a recent web browser (it uses websockets).",
+          "link": "http://chat.wayset.ca/",
+          "isActive": true
+        }
+      ]
+    }
+  }
+}

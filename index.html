@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=yes"
+    />
+    <meta name="description" content="simple layout for a resume" />
+    <meta name="author" content="ioleak.com" />
+    <title>Please wait while the page is loading...</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <style>
+      @media all {
+        .page-break {
+          display: none;
+        }
+      }
+
+      @media print {
+        body {
+          width: 900px;
+          overflow: visible;
+        }
+
+        body > div {
+          max-width: 900px;
+        }
+
+        span.page-break {
+          display: block;
+          page-break-after: always;
+        }
+      }
+
+      @page {
+        margin: 15mm 5mm 15mm 10mm;
+      }
+    </style>
+  </head>
+
+  <body style="margin: 0px">
+    <div id="main">
+      <p style="text-align: center; font-weight: bolder">
+        Please wait while the page is loading...
+      </p>
+    </div>
+
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
