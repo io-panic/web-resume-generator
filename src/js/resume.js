@@ -20,9 +20,12 @@ class ResumeGenerator {
       })
       .then((jsonData) => {
         var lang = languageData.getUrlLang();
-        window.document.title = jsonData.resume[lang].basics.name + " [" + jsonData.resume[lang].basics.label + "]";
+        if (!(lang in jsonData.resume)) {
+          alert("Language has not values: " + lang);
+          return;
+        }
 
-        nunjucks.renderString("Hello {{ username }}", { username: "James" });
+        window.document.title = jsonData.resume[lang].basics.name + " [" + jsonData.resume[lang].basics.label + "]";
 
         nunjucks.render(
           "layout.html",
@@ -34,9 +37,10 @@ class ResumeGenerator {
             formatEducation: this.formatEducation
           },
           function (err, res) {
-            console.log("*******************************");
-            console.log(res);
-            console.log(err);
+            if (err != null) {
+              console.log("An error occured");
+              console.log(err);
+            }
 
             document.getElementById("main").innerHTML = res;
           }

@@ -6,8 +6,10 @@
           <h3 class="text-uppercase fw-bolder m-0 p-0">{{ data.resume[lang].basics.name }}</h3>
           <h4 class="text-uppercase text-muted m-0 p-0">{{ data.resume[lang].basics.label }}</h4>
           <div class="text-end">
-            <hr>
-            <div class="text-uppercase fw-lighter fst-italic" style="font-size: 0.7em;">{{ data.resume[lang].basics.summary.subtitle }}</div>        
+            <hr />
+            <div class="text-uppercase fw-lighter fst-italic" style="font-size: 0.7em">
+              {{ data.resume[lang].basics.summary.subtitle }}
+            </div>
           </div>
         </div>
       </div>
@@ -26,49 +28,52 @@
 
       <div class="row pt-4">
         <div class="col">
-          <h4 class="text-uppercase fw-bolder"><i class="bi bi-star pe-2"></i>{{ i18n("qualificationTitle") }}</h4>
+          <h4 class="text-uppercase fw-bolder">
+            <i class="fa-solid fa-ranking-star pe-2"></i>{{ i18n("qualificationTitle") }}
+          </h4>
+
           {% for item in data.resume[lang].interests %}
-          <h5 class="fw-bold pt-3"><i class="bi bi-check2-circle pe-2"></i>{{ item.name }}</h5>
-          <div style="text-align: justify; text-justify: inter-word;">
-            {{ item.description.short }}
-          </div>
+          <h5 class="fw-bold pt-3"><i class="fa-solid fa-angle-right pe-2"></i>{{ item.name }}</h5>
+          <div class="ps-4" style="text-align: justify; text-justify: inter-word">{{ item.description.short }}</div>
           {% endfor %}
         </div>
       </div>
     </div>
 
     <div class="col-sm-4">
-      <div class="row" style="padding-top: 75px;">
+      <div class="row" style="padding-top: 75px">
         <div class="col">
           <div class="card">
             <div class="card-header">
-              <i class="bi bi-pin-map pe-2"></i><span class="fw-bolder fs-5 text-uppercase">{{ i18n("addressTitle") }}</span>
+              <i class="fa-solid fa-map-location-dot pe-2"> </i>
+              <span class="fw-bolder fs-5 text-uppercase"> {{ i18n("addressTitle") }} </span>
             </div>
 
             <ul class="list-group list-group-flush">
               <li class="list-group-item">
                 <p>
-                  {{ data.resume[lang].basics.location.address }}<br>
-                  {{ data.resume[lang].basics.location.city }}, {{ data.resume[lang].basics.location.region }}<br>
-                  {{ data.resume[lang].basics.location.postalCode }}              
+                  {{ data.resume[lang].basics.location.address }}<br />
+                  {{ data.resume[lang].basics.location.city }}, {{ data.resume[lang].basics.location.region }}<br />
+                  {{ data.resume[lang].basics.location.postalCode }}
                 </p>
 
-                <p style="font-size: 0.9em;">
-                  <i class="bi bi-phone pe-2"></i>{{ data.resume[lang].basics.phone }}<br>
-                  <i class="bi bi-mailbox pe-2"></i>{{ data.resume[lang].basics.email }}<br>
-                  <i class="bi bi-link pe-2"></i>{{ data.resume[lang].basics.website }}
+                <p style="font-size: 0.9em">
+                  <i class="fa-solid fa-phone pe-2"></i>{{ data.resume[lang].basics.phone }}<br />
+                  <i class="fa-solid fa-envelope-circle-check pe-2"></i>{{ data.resume[lang].basics.email }}<br />
+                  <i class="fa-solid fa-link pe-2"></i>{{ data.resume[lang].basics.website }}
                 </p>
               </li>
             </ul>
-          </div>          
+          </div>
         </div>
       </div>
 
-      <div class="row" style="padding-top: 20px;">
+      <div class="row" style="padding-top: 20px">
         <div class="col">
           <div class="card">
             <div class="card-header">
-              <i class="bi bi-bag-check pe-2"></i><span class="fw-bolder fs-5 text-uppercase">{{ i18n("skillsTitle") }}</span>
+              <i class="fa-solid fa-cart-flatbed-suitcase"></i>
+              <span class="fw-bolder fs-5 text-uppercase">{{ i18n("skillsTitle") }}</span>
             </div>
 
             <div class="ps-2 pb-2">
@@ -77,11 +82,11 @@
               <div>
                 {% for keyword in item.keywords %}
                 <span class="badge bg-secondary text-decoration-none link-light">{{ keyword.name }}</span>
-                {% endfor %}              
+                {% endfor %}
               </div>
               {% endfor %}
             </div>
-          </div>          
+          </div>
         </div>
       </div>
     </div>
@@ -91,10 +96,11 @@
 
   <div class="row pt-3">
     <div class="col">
-      <h4 class="text-uppercase fw-bolder"><i class="bi bi-person-workspace pe-2"></i>{{ i18n("workExperienceTitle") }}</h4>
-      {% for item in data.resume[lang].work %}
-
-      {% if item.pagebreak %}
+      <h4 class="text-uppercase fw-bolder">
+        <i class="fa-solid fa-person-walking-luggage pe-2"></i>
+        {{ i18n("workExperienceTitle") }}
+      </h4>
+      {% for item in data.resume[lang].work %} {% if item.pagebreak %}
       <span class="page-break"></span>
       {% endif %}
 
@@ -110,16 +116,18 @@
               {% endfor %}
             </ul>
             {% endfor %}
-            <div style="text-align: justify; text-justify: inter-word;">
-              {{ item.description.short }}
-            </div>
+            <div style="text-align: justify; text-justify: inter-word">{{ item.description.short }}</div>
           </ul>
         </div>
         <div class="col-sm-4 text-end">
           <p class="fst-italic">{{ formatDate(item.startDate) }} - {{ formatDate(item.endDate) }}</p>
-          <p><span class="fw-bold">{{ item.company }}</span><br>
-            <span class="font-size: 0.9em;">{{ item.location }}</span><br>
-            <span class="fst-italic"><i class="bi bi-box-arrow-up-right pe-2"></i><a href="{{ item.website }}">{{ item.website }}</a></span>
+          <p>
+            <span class="fw-bold">{{ item.company }}</span><br />
+            <span class="font-size: 0.9em;">{{ item.location }}</span><br />
+            <span class="fst-italic">
+              <i class="fa-solid fa-arrow-up-right-from-square pe-2"></i>
+              <a href="{{ item.website }}"> {{ item.website }} </a>
+            </span>
           </p>
         </div>
       </div>
@@ -133,7 +141,10 @@
     <div class="col">
       <div class="row">
         <div class="col-sm-8">
-          <h4 class="text-uppercase fw-bolder"><i class="bi bi-pencil-square pe-2"></i>{{ i18n("educationTitle") }}</h4>
+          <h4 class="text-uppercase fw-bolder">
+            <i class="fa-solid fa-pencil pe-2"></i>
+            {{ i18n("educationTitle") }}
+          </h4>
 
           {% for item in data.resume[lang].education %}
           <div class="pt-2">
@@ -141,7 +152,7 @@
               <td>
                 <h5 class="fw-bold p-0 m-0">{{ formatEducation(item.area, item.studyType) }}</h5>
                 {% for course in item.courses %}
-                  <div>{{ course }}</div>
+                <div>{{ course }}</div>
                 {% endfor %}
                 <div>{{ item.institution }}</div>
               </td>
@@ -151,27 +162,38 @@
           {% endfor %}
         </div>
         <div class="col-sm-4 text-end">
-          <h4 class="text-uppercase fw-bolder"><i class="bi bi-translate pe-2"></i>{{ i18n("languageTitle") }}</h4>
+          <h4 class="text-uppercase fw-bolder">
+            <i class="fa-solid fa-language pe-2"></i>
+            {{ i18n("languageTitle") }}
+          </h4>
+
           {% for item in data.resume[lang].languages %}
           <div>
             <p>
-              <span class="fw-bold">{{ item.language }}</span><br>
+              <span class="fw-bold"> {{ item.language }} </span>
+              <br />
               {{ item.fluency }}
             </p>
           </div>
-          {% endfor %}            
+          {% endfor %}
         </div>
       </div>
     </div>
   </div>
 
-  <div class="row" style="padding-top: 35px;">
+  <div class="row" style="padding-top: 35px">
     <div class="col">
-      <h4 class="text-uppercase fw-bolder"><i class="bi bi-patch-check pe-2"></i>Certifications</h4>
+      <h4 class="text-uppercase fw-bolder">
+        <i class="fa-solid fa-stamp pe-2"></i>
+        Certifications
+      </h4>
+
       {% for item in data.resume[lang].certifications %}
       <div class="pt-2">
         <table class="w-100">
-          <td><h5 class="fw-bold m-0 p-0">{{ item.name }}</h5></td>
+          <td>
+            <h5 class="fw-bold m-0 p-0">{{ item.name }}</h5>
+          </td>
           <td class="text-end">{{ item.dateCompleted }}</td>
         </table>
 
