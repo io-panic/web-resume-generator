@@ -1,0 +1,59 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <div class="card-title bg-primary fw-bolder text-white ps-2">Select your resume</div>
+          <div class="row">
+            <div class="col">
+              <select
+                id="selectedResume"
+                class="form-select form-select-sm"
+                aria-label=".form-select-sm example"
+                onChange="resumeSelection.displayResumeInfo(document.getElementById('selectedResume'))">
+                <option disabled selected value>-- select an option --</option>
+
+                {% for item in data %}
+                <option value="{{ item.file }}">{{ item.title }}</option>
+                {% endfor %}
+              </select>
+            </div>
+          </div>
+          <div class="row pt-4">
+            <div class="col">
+              <div class="row">
+                <div class="col-sm-3 fw-bolder">Filename</div>
+                <div id="resume_filename" class="col"></div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-3 fw-bolder">Title</div>
+                <div id="resume_title" class="col"></div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-3 fw-bolder">Description</div>
+                <div id="resume_description" class="col"></div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-3 fw-bolder">Last update</div>
+                <div id="resume_lastupdate" class="col"></div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col text-end">
+              <button
+                type="button"
+                class="btn btn-sm btn-primary fw-bolder text-uppercase"
+                onClick="window.open('?resume_json='+document.getElementById('selectedResume').value, '_blank')">
+                Generate
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

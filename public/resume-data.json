@@ -1,5 +1,7 @@
 {
   "_version": "1.0.0",
+  "description": "Full resume with entire background",
+  "last_update": "2020-08-11",
   "resume": {
     "en": {
       "basics": {

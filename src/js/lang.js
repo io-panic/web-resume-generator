@@ -1,3 +1,5 @@
+import { QueryParams } from "./params.js";
+
 const LANGUAGE_DEFAULT = "en";
 const LANGUAGE_QUERY_PARAM = "lang";
 const LANGUAGE_PATH_JSON_PREFIX = "./locales/";
@@ -34,13 +36,7 @@ class LanguageData {
   }
 
   getUrlLang() {
-    let lang = LANGUAGE_DEFAULT;
-    let urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.has(LANGUAGE_QUERY_PARAM)) {
-      lang = urlParams.get(LANGUAGE_QUERY_PARAM);
-    }
-
-    return lang;
+    return QueryParams.getUrlParam(LANGUAGE_QUERY_PARAM, LANGUAGE_DEFAULT);
   }
 
   getLangValue(key) {

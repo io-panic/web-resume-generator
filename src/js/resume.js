@@ -1,16 +1,26 @@
 import { languageData } from "./lang.js";
+import { QueryParams } from "./params.js";
+
 import nunjucks from "nunjucks/browser/nunjucks.min.js";
 
-const JSON_RESUME_DATA_PATH = "./resume-data.json";
+const JSON_PATH_RESUME_LIST = "./resumes.json";
 
 class ResumeGenerator {
   initPage() {
     languageData.loadLanguage();
-    this.readJsonResume();
+
+    let resumePath = QueryParams.getUrlParam("resume_json", null);
+    if (resumePath != null) {
+      this.readJsonResume(resumePath, (jsonData) => {
+        this.renderResumeHTML(jsonData);
+      });
+    } else {
+      this.readJsonList();
+    }
   }
 
-  readJsonResume() {
-    fetch(JSON_RESUME_DATA_PATH)
+  readJsonList() {
+    fetch(JSON_PATH_RESUME_LIST)
       .then((response) => {
         if (!response.ok) {
           throw new Error("HTTP error " + response.status);
@@ -19,24 +29,12 @@ class ResumeGenerator {
         return response.json();
       })
       .then((jsonData) => {
-        var lang = languageData.getUrlLang();
-        if (!(lang in jsonData.resume)) {
-          alert("Language has not values: " + lang);
-          return;
-        }
-
-        window.document.title = jsonData.resume[lang].basics.name + " [" + jsonData.resume[lang].basics.label + "]";
-
         nunjucks.render(
-          "layout.html",
+          "selection.html",
           {
-            data: jsonData,
-            lang: lang,
-            i18n: this.getLangValue,
-            formatDate: this.formatDate,
-            formatEducation: this.formatEducation
+            data: jsonData
           },
-          function (err, res) {
+          (err, res) => {
             if (err != null) {
               console.log("An error occured");
               console.log(err);
@@ -50,6 +48,53 @@ class ResumeGenerator {
         console.log("JSON Error! Cannot read data...");
         console.log(error);
       });
+  }
+
+  readJsonResume(path_resume, callback_success) {
+    fetch(path_resume)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("HTTP error " + response.status);
+        }
+
+        return response.json();
+      })
+      .then((jsonData) => {
+        callback_success(jsonData);
+      })
+      .catch((error) => {
+        console.log("JSON Error! Cannot read data...");
+        console.log(error);
+      });
+  }
+
+  renderResumeHTML(jsonData) {
+    var lang = languageData.getUrlLang();
+    if (!(lang in jsonData.resume)) {
+      alert("Language has not values: " + lang);
+      return;
+    }
+
+    window.document.title = jsonData.resume[lang].basics.name + " [" + jsonData.resume[lang].basics.label + "]";
+
+    nunjucks.render(
+      "resume.html",
+      {
+        data: jsonData,
+        lang: lang,
+        i18n: this.getLangValue,
+        formatDate: this.formatDate,
+        formatEducation: this.formatEducation
+      },
+      (err, res) => {
+        if (err != null) {
+          console.log("An error occured");
+          console.log(err);
+        }
+
+        document.getElementById("main").innerHTML = res;
+      }
+    );
   }
 
   // special case because this function is called from nunjucks
