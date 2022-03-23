@@ -1,5 +1,5 @@
-import { languageData } from "./lang.js";
-import { QueryParams } from "./params.js";
+import { languageData } from "@/js/lang.js";
+import { QueryParams } from "@/js/params.js";
 
 import nunjucks from "nunjucks/browser/nunjucks.min.js";
 

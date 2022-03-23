@@ -1,5 +1,5 @@
 import { select } from "nunjucks/src/filters";
-import { resumeGenerator } from "./resume.js";
+import { resumeGenerator } from "@/js/resume.js";
 
 class ResumeSelection {
   displayResumeInfo(selectedOption) {

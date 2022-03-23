@@ -1,4 +1,4 @@
-import { QueryParams } from "./params.js";
+import { QueryParams } from "@/js/params.js";
 
 const LANGUAGE_DEFAULT = "en";
 const LANGUAGE_QUERY_PARAM = "lang";
