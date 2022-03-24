@@ -3,7 +3,7 @@ import { QueryParams } from "@/js/params.js";
 
 import nunjucks from "nunjucks/browser/nunjucks.min.js";
 
-const JSON_PATH_RESUME_LIST = "./resumes.json";
+const JSON_PATH_RESUME_LIST = "/resumes/resumes.json";
 
 class ResumeGenerator {
   initPage() {
